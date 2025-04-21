@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Contact Manager</a>
+  </div>
+</nav>
+<div class="container mt-4">
+  <h2>Edit Contact</h2>
+  <form (ngSubmit)="saveContact()">
+    <div class="form-group">
+      <label>First Name</label>
+      <input class="form-control" [(ngModel)]="contact.fName" name="fName" required />
+    </div>
+    <div class="form-group mt-2">
+      <label>Last Name</label>
+      <input class="form-control" [(ngModel)]="contact.lName" name="lName" required />
+    </div>
+    <div class="form-group mt-2">
+      <label>Phone Number</label>
+      <input class="form-control" [(ngModel)]="contact.phoneNumber" name="phoneNumber" required />
+    </div>
+    <div class="form-group mt-2">
+      <label>Email</label>
+      <input class="form-control" [(ngModel)]="contact.email" name="email" required />
+    </div>
+    <button class="btn btn-primary mt-3" type="submit">Save</button>
+  </form>
+</div>

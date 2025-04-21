@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Contact Manager</a>
+  </div>
+</nav>
+<div class="contact-card">
+    <h5>{{ contact.fName }} {{ contact.lName }}</h5>
+    <p><strong>Phone:</strong> {{ contact.phoneNumber }}</p>
+    <p><strong>Email:</strong> {{ contact.email }}</p>
+    
+    <div class="card-buttons">
+      <button class="btn btn-primary" [routerLink]="['/edit', contact.id]">Edit</button>
+
+      <button class="btn btn-danger" (click)="deleteContact.emit(contact.id)">Delete</button>
+    </div>
+  </div>
+  

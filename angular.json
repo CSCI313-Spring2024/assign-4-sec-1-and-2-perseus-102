@@ -27,8 +27,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
-            ],
+               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "src/styles.css"
+              ],
             "scripts": []
           },
           "configurations": {
@@ -89,8 +90,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "384bc848-7286-4f49-844d-43644607926e"
   }
 }

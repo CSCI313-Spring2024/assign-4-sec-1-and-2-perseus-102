@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Contact Manager</a>
+  </div>
+</nav>
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Contact List</h2>
+
+  <div class="text-end mb-3">
+    <button class="btn btn-primary" routerLink="/add">Add New Contact</button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let contact of contacts; let i = index">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ contact.fName }} {{ contact.lName }}</h5>
+          <p class="card-text">
+            <strong>Phone:</strong> {{ contact.phoneNumber }}<br />
+            <strong>Email:</strong> {{ contact.email || 'N/A' }}
+          </p>
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-primary me-2" (click)="goToEditContact(i)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteContact(i)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
